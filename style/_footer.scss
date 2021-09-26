@@ -1,0 +1,115 @@
+
+
+.footer {
+    background-color:$footer-bg-color;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 200px;
+    padding-bottom: 1.5rem;
+
+    .links ul {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+
+        a {
+            color: $footerTextColor;
+            margin: 0 10px;
+            font-size: 30px;
+            &:hover {
+                color: $white-text;
+            }
+        }
+    } 
+
+    .FAQ ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        a {
+            color: $footerTextColor;
+            font-size: 16px;
+            &:hover {
+                color: $white-text;
+            }
+        }
+    }
+
+    .contact {
+
+        div label {
+            font-size: 16px;
+        }
+        label {
+        color: $footerTextColor;
+        font-size: 14px;
+            
+        }
+        
+        input, textarea {
+            outline: none;
+        }   
+
+    }
+
+    .submitBtn {
+        color: $white-text;
+        background-color: $orangeColor;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 20px;
+        border: none;
+        font-size: 13px;
+        font-weight: bold;
+        &:hover {
+            background-color: rgba($orangeColor, 0.8);
+            outline: 0;
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+}
+
+.copyright {
+    color: $footerTextColor;
+    font-size: 10px;
+    text-align: center;
+    background-color: $footer-bg-color;
+    padding-bottom: 1rem;
+}
+
+
+@media Screen and (max-width:834px) {
+    .footer {
+        flex-direction: column;
+        height: auto;
+        .links ul {
+            margin-top:1rem;
+        }
+        .FAQ ul {
+            flex-direction: row;
+            a {
+                text-align: center;
+                margin-inline: 10px;
+
+            }
+        }
+
+        .submitBtn { 
+            padding: 6px 40%;
+            margin-top: 1rem;
+        }
+
+
+        .contact {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
